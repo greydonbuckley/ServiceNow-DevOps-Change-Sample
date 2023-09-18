@@ -17,10 +17,8 @@ jobs:
     # You may pin to the exact commit or the version.           
       uses: ServiceNow/servicenow-devops-register-package@v2.0.0
       with:
-          # ServiceNow Devops Integration User Name
-          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          # ServiceNow Devops Integration User Password
-          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+          # Devops Integration Token
+          devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
           # ServiceNow Instance URL
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           # Orchestration Tool Id of the tool created in ServiceNow
@@ -52,10 +50,8 @@ jobs:
       with:
           # ServiceNow Instance URL
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
-          # Devops Integration User Name
-          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          # Devops Integration User Password
-          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+          # Devops Integration Token
+          devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
           # Orchestration Tool Id
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           # Display Name of the Job
