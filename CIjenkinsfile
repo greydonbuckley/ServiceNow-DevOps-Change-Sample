@@ -10,6 +10,8 @@ def pipelineName = "${JOB_NAME}"
 def changeRequestId = "defaultChangeRequestId"
 def stageName = "Deploy"
 
+def releasePipelineName = "CD Pipeline"
+
 pipeline {
 	agent any
 	
@@ -94,6 +96,13 @@ pipeline {
 				// to get the security event back to ServiceNow, input 'waitForScan' to true
 				// veracode applicationName: "${env.VERACODE_APPLICATION_NAME}", scanName: "${BUILD_TAG}", uploadIncludesPattern: 'target/*.jar', vid: "<apiId>", vkey: "<apiKey>", waitForScan : true
 				snDevOpsSecurityResult securityResultAttributes: '{"scanner": "Veracode", "applicationName": "${env.VERACODE_APPLICATION_NAME}"}'
+			}
+		}
+	}
+	post{
+		success{
+			script{
+				build job: '${releasePipelineName}'
 			}
 		}
 	}
