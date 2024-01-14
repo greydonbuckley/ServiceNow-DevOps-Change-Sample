@@ -165,11 +165,10 @@ pipeline {
 }
 
 def sonarSummaries() {
-	withSonarQubeEnv(installationName: 'ramasonarcloud'){
-		sh 'mvn clean verify sonar:sonar \
-		    -Dsonar.login=1926d793f92181dd0ac406335d4d4bea392a3023 \
-		    -Dsonar.host.url=https://sonarcloud.io \
-		    -Dsonar.organization=pramaraju96 \
-		    -Dsonar.projectKey=pramaraju96_DevOps-Test'
+	withSonarQubeEnv(installationName: 'sonarqube1'){
+		sh 'mvn sonar:sonar \
+		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491 \
+		    -Dsonar.host.url=https://sonarqube1.sndevops.xyz \
+		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491'
     }
 }
