@@ -18,7 +18,7 @@ pipeline {
 	}
 
 	environment {
-		SCANNER_HOME = tool 'sonarScanner'
+		SCANNER_HOME = tool 'sonarCloud'
 		VERACODE_APPLICATION_NAME = 'ServiceNow DevOps App#1'
 		VERACODE_SCANNER_NAME = 'Veracode'
 	} 
@@ -165,7 +165,7 @@ pipeline {
 }
 
 def sonarSummaries() {
-	withSonarQubeEnv(installationName: 'sonarqube1'){
+	withSonarQubeEnv(installationName: 'sonarCloud'){
 		sh 'mvn sonar:sonar \
 		    -Dsonar.login=97627ef22253af6ab0c2cc751b3834b83457bb28 \
 		    -Dsonar.host.url=https://sonarcloud.io \
