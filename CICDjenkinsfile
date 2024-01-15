@@ -167,8 +167,11 @@ pipeline {
 def sonarSummaries() {
 	withSonarQubeEnv(installationName: 'sonarqube1'){
 		sh 'mvn sonar:sonar \
-		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491 \
-		    -Dsonar.host.url=http://sonarqube1.sndevops.xyz \
-		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491'
+		    -Dsonar.login=97627ef22253af6ab0c2cc751b3834b83457bb28 \
+		    -Dsonar.host.url=https://sonarcloud.io \
+		    -Dsonar.organization=greydonbuckley \
+		    -Dsonar.projectKey=greydonbuckley_ServiceNow-DevOps-Change-Sample'
+//		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491 \
+//		    -Dsonar.host.url=http://sonarqube1.sndevops.xyz \
     }
 }
