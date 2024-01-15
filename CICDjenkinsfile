@@ -170,7 +170,8 @@ def sonarSummaries() {
 		    -Dsonar.login=97627ef22253af6ab0c2cc751b3834b83457bb28 \
 		    -Dsonar.host.url=https://sonarcloud.io \
 		    -Dsonar.organization=greydonbuckley \
-		    -Dsonar.projectKey=greydonbuckley_ServiceNow-DevOps-Change-Sample'
+		    -Dsonar.projectKey=greydonbuckley_ServiceNow-DevOps-Change-Sample \
+                    -Dsonar.scanner.force-deprecated-java-version=true'
 //		    -Dsonar.login=ee4338ce1851cffc2edfc8742fb1a59862756491 \
 //		    -Dsonar.host.url=http://sonarqube1.sndevops.xyz \
     }
