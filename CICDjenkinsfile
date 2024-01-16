@@ -33,7 +33,7 @@ pipeline {
 		stage('Test') {
 			steps {
 			  	sh 'mvn test'
-				sleep(5);
+				//sleep(5);
 			}
 			post {
 				always {
@@ -75,7 +75,7 @@ pipeline {
 
 					def buildInfo = server.upload(uploadSpec) 
 					server.publishBuildInfo buildInfo
-					sleep(5);
+					//sleep(5);
 				}
 
 				echo "Downloading the artifacts from JFrog"
@@ -91,7 +91,7 @@ pipeline {
 
 					def buildInfo = server.download(downSpec) 
 					server.publishBuildInfo buildInfo
-					sleep(5);
+					//sleep(5);
 				}
 				*/
 
