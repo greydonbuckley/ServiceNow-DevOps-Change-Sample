@@ -13,7 +13,7 @@ http.createServer(function (req, res) {
 		res.end(); 
 	}
 	else if(url ==='/project') {
-		res.write(' Welcome to contact us page'); 
+		res.write(' Welcome to project page'); 
 		res.end(); 
 	}
 	else {
