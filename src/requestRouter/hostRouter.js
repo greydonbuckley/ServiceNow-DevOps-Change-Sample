@@ -12,12 +12,12 @@ http.createServer(function (req, res) {
 		res.write(' Welcome to about us page'); 
 		res.end(); 
 	}
-	else if(url ==='/contact') {
+	else if(url ==='/project') {
 		res.write(' Welcome to contact us page'); 
 		res.end(); 
 	}
 	else {
-		res.write('Hello World!'); 
+		res.write('Invalid page'); 
 		res.end(); 
 	}
 }).listen(3000, function() {
