@@ -12,8 +12,8 @@ http.createServer(function (req, res) {
 		res.write(' Welcome to about us page'); 
 		res.end(); 
 	}
-	else if(url ==='/admin') {
-		res.write(' Welcome to admin page'); 
+	else if(url ==='/project') {
+		res.write(' Welcome to project page'); 
 		res.end(); 
 	}
 	else {
