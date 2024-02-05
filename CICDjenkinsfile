@@ -104,6 +104,7 @@ pipeline {
                   }
                   steps {
 				//sonarSummaries()
+                                echo "Sonar scan..."
 			}
 		}
 
