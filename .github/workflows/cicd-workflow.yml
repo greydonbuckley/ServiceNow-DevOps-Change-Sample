@@ -189,7 +189,6 @@ jobs:
               "assignment_group": {
               "name": "Change Management"
               },
-              "change_model":{"name":"DevOps"},
               "priority": "2",
               "comments": "This is a sample pipeline script to be added in your change step",
               "work_notes": "Update this to work_notes",
