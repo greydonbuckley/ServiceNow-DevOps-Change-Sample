@@ -85,7 +85,7 @@ jobs:
 
   sonarScan:
     name: 'Sonar Scan'
-    if: 'false' == 'true'
+    if: false
     needs: registerArtifact
     runs-on: ubuntu-latest
     steps:
@@ -113,7 +113,7 @@ jobs:
 
   securityScan:
     name: 'Security Scan'
-    if: 'false' == 'true'
+    if: false
     needs: sonarScan
     runs-on: ubuntu-latest
     steps:
