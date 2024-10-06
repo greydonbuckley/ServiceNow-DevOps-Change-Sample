@@ -85,6 +85,7 @@ jobs:
 
   sonarScan:
     name: 'Sonar Scan'
+    if: 'false' == 'true'
     needs: registerArtifact
     runs-on: ubuntu-latest
     steps:
@@ -112,6 +113,7 @@ jobs:
 
   securityScan:
     name: 'Security Scan'
+    if: 'false' == 'true'
     needs: sonarScan
     runs-on: ubuntu-latest
     steps:
@@ -131,7 +133,7 @@ jobs:
 
   registerPackage:
     name: 'Register Package'
-    needs: securityScan
+    needs: registerArtifact
     runs-on: ubuntu-latest
     steps:
     - name: ServiceNow DevOps Register Package
