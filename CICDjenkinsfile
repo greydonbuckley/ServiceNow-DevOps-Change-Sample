@@ -55,7 +55,7 @@ pipeline {
 				        "repositoryName": "${repoName}"
 				    }
 				],
-				"branchName": "main"
+				"branchName": "demo"
 				}""")
 
 				// uncomment the below block of code to use artifact step with JFrog
@@ -141,7 +141,7 @@ pipeline {
 				            "repositoryName": "${repoName}"
 				        }
 				    ],
-				    "branchName": "main"
+				    "branchName": "demo"
 				}""")
 			}
 		}
