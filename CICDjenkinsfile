@@ -4,7 +4,7 @@ def artifactname = "app-devops.jar"
 def version = "1.${BUILD_NUMBER}"
 def semanticVersion = "1.${BUILD_NUMBER}.0"
 
-def repoName = "pramaraju96/DevOps-Test"
+def repoName = "ServiceNow-DevOps-Change-Sample"
 def pipelineName = "${JOB_NAME}"
 
 def changeRequestId = "defaultChangeRequestId"
