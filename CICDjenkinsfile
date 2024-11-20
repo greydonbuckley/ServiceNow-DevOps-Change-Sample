@@ -130,7 +130,6 @@ pipeline {
 			steps {
                                 echo "register package..."
 
-/*
 				snDevOpsPackage(
 				name: "${packageName}",
 				artifactsPayload: """
@@ -146,7 +145,6 @@ pipeline {
 				    ],
 				    "branchName": "demo"
 				}""")
-*/
 			}
 		}
 		  
