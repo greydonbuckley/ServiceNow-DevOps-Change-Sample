@@ -60,21 +60,19 @@ pipeline {
 
 				// uncomment the below block of code to use artifact step with JFrog
 				sh 'mvn package'
-/*				
 				echo "Uploading the artifacts to JFrog"
 
 				script{
-					def server = Artifactory.server 'nowdevops'
+					def server = Artifactory.server 'jfrog'
 					def uploadSpec = """{
 						"files": [{
-							"pattern": "target/devops-e2e-1.40.0-SNAPSHOT.jar",
-							"target": "devops-jfrog-local-repo/"
+							"pattern": "target/ServiceNow-DevOps-Change-Sample-1.0-SNAPSHOT.jar",
+							"target": "nowdevops/"
 						}]
 					}"""
 
 					def buildInfo = server.upload(uploadSpec) 
 					server.publishBuildInfo buildInfo
-					//sleep(5);
 				}
 
 				echo "Downloading the artifacts from JFrog"
@@ -92,7 +90,6 @@ pipeline {
 					server.publishBuildInfo buildInfo
 					//sleep(5);
 				}
-				*/
 
 			}     
 		}
