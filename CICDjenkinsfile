@@ -88,7 +88,6 @@ pipeline {
 
 					def buildInfo = server.download(downSpec) 
 					server.publishBuildInfo buildInfo
-					//sleep(5);
 				}
 
 			}     
