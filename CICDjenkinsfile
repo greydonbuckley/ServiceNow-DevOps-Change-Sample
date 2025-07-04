@@ -26,7 +26,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'mvn -B -DskipTests package'
+				sh 'mvn -B -DskipTests clean compile'
 			}
 		}
 
@@ -60,7 +60,7 @@ pipeline {
 
 				// uncomment the below block of code to use artifact step with JFrog
 				sh 'mvn package'
-				
+/*				
 				echo "Uploading the artifacts to JFrog"
 
 				script{
