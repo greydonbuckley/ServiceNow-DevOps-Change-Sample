@@ -15,6 +15,7 @@ pipeline {
 	
 	tools {
 		maven 'Maven'
+                jfrog 'jfrog-cli'
 	}
 
 	environment {
@@ -61,7 +62,9 @@ pipeline {
 				// uncomment the below block of code to use artifact step with JFrog
 				sh 'mvn package'
 				echo "Uploading the artifacts to JFrog"
+		                jf 'rt u target/ServiceNow-DevOps-Change-Sample-1.0-SNAPSHOT.jar change-sample-libs-release-local/'
 
+/*
 				script{
 					def server = Artifactory.server 'jfrog'
 					def uploadSpec = """{
@@ -74,6 +77,7 @@ pipeline {
 					def buildInfo = server.upload(uploadSpec) 
 					server.publishBuildInfo buildInfo
 				}
+
 
 				echo "Downloading the artifacts from JFrog"
 
@@ -89,14 +93,11 @@ pipeline {
 					def buildInfo = server.download(downSpec) 
 					server.publishBuildInfo buildInfo
 				}
-
+*/
 			}     
 		}
 
 		stage('Sonar Scan') {
-//                  tools {
-//                    jdk "jdk17" // the name you have given the JDK installation in Global Tool Configuration
-//                  }
                   steps {
 			withSonarQubeEnv(installationName: 'sonarCloud') {
 				sh 'mvn sonar:sonar \
