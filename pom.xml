@@ -17,6 +17,22 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+	        <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	            <version>${org.slf4j.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-log4j12</artifactId>
+	            <version>${org.slf4j.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.commons</groupId>
+	            <artifactId>commons-lang3</artifactId>
+	            <version>${commons-lang3.version}</version>
+	        </dependency>
+
 	</dependencies>
 
 	<!-- Configure Maven Surefire Plugin for test execution -->
