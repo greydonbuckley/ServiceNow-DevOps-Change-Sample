@@ -145,6 +145,7 @@ pipeline {
 				    "branchName": "demo"
 				}""")
 			}
+			jf 'rt build-publish'
 		}
 		  
 		stage('Change') {
