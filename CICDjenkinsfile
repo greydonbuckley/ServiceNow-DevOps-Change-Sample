@@ -45,6 +45,7 @@ pipeline {
 
 		stage('Register Artifact') {
 			steps {
+/*
 				snDevOpsArtifact(artifactsPayload: """
 				{
 				"artifacts":
@@ -58,7 +59,7 @@ pipeline {
 				],
 				"branchName": "demo"
 				}""")
-
+*/
 				// uncomment the below block of code to use artifact step with JFrog
 				sh 'mvn package'
 				echo "Uploading the artifacts to JFrog"
