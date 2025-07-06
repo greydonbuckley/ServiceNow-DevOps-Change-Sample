@@ -116,7 +116,7 @@ pipeline {
 		stage('Security Scan') {
 			steps {
 				jf 's target/ServiceNow-DevOps-Change-Sample-1.0-SNAPSHOT.jar'
-                                jf 'bs ${JOB_NAME} 1.${BUILD_NUMBER}.0"
+                                jf 'bs ${JOB_NAME} 1.${BUILD_NUMBER}.0'
 
 				// uncomment below line of code to trigger a new Veracode scan
 				// to get the security event back to ServiceNow, input 'waitForScan' to true
