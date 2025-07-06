@@ -146,8 +146,7 @@ pipeline {
 				    "branchName": "demo"
 				}""")
 
-                        jf 'evd create --build-name ${JOB_NAME} --build-number 1.${BUILD_NUMBER}.0 --predicate target/surefire-reports/TEST-test.java.CalculatorTest.xml --predicate-type
-//evd create --predicate /Users/jsmith/Downloads/code-review.json --predicate-type https://in-toto.io/attestation/vulns --subject-repo-path commons-dev-generic-local/commons/file.txt --subject-sha256 69d29925ba75eca8e67e0ad99d1132b47d599c206382049bc230f2edd2d3af30 --key /Users/jsmith/Documents/keys/private.pem --key-alias xyzey
+                        //jf 'evd create --build-name ${JOB_NAME} --build-number 1.${BUILD_NUMBER}.0 --predicate target/surefire-reports/TEST-test.java.CalculatorTest.xml --predicate-type
 
 			jf 'rt build-publish'
 
