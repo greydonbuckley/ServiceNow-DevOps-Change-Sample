@@ -114,11 +114,13 @@ pipeline {
 
 		stage('Security Scan') {
 			steps {
+				jf s "devops-jfrog-local-repo/devops-e2e-1.40.0-SNAPSHOT.jar"
+
 				// uncomment below line of code to trigger a new Veracode scan
 				// to get the security event back to ServiceNow, input 'waitForScan' to true
 				// veracode applicationName: "${env.VERACODE_APPLICATION_NAME}", scanName: "${BUILD_TAG}", uploadIncludesPattern: 'target/*.jar', vid: "<apiId>", vkey: "<apiKey>", waitForScan : true
 				//snDevOpsSecurityResult securityResultAttributes: '{"scanner": "Veracode", "applicationName": "${env.VERACODE_APPLICATION_NAME}"}'
-                                echo "security scan..."
+                                //echo "security scan..."
 			}
 		}
 
