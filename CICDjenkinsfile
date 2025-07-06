@@ -114,7 +114,7 @@ pipeline {
 
 		stage('Security Scan') {
 			steps {
-				jf s "devops-jfrog-local-repo/devops-e2e-1.40.0-SNAPSHOT.jar"
+				jf 's target/ServiceNow-DevOps-Change-Sample-1.0-SNAPSHOT.jar'
 
 				// uncomment below line of code to trigger a new Veracode scan
 				// to get the security event back to ServiceNow, input 'waitForScan' to true
