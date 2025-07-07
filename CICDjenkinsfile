@@ -142,8 +142,7 @@ pipeline {
 				    ],
 				    "branchName": "demo"
 				}""")
-			jf 'evd create --predicate src/sample/in-toto-testresult.json --predicate-type https://in-toto.io/attestation/test-result'
-                        //jf 'evd create --build-name ${JOB_NAME} --build-number 1.${BUILD_NUMBER}.0 --predicate target/surefire-reports/TEST-test.java.CalculatorTest.xml --predicate-type
+			//jf 'evd create --predicate src/sample/in-toto-testresult.json --predicate-type https://in-toto.io/attestation/test-result'
 
 			jf 'rt build-publish'
 
