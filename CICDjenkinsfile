@@ -65,7 +65,6 @@ pipeline {
 				echo "Uploading the artifacts to JFrog"
 		                jf 'rt u target/ServiceNow-DevOps-Change-Sample-1.0-SNAPSHOT.jar change-sample-libs-release-local/'
 
-/*
 				script{
 					def server = Artifactory.server 'jfrog'
 					def uploadSpec = """{
@@ -78,7 +77,7 @@ pipeline {
 					def buildInfo = server.upload(uploadSpec) 
 					server.publishBuildInfo buildInfo
 				}
-
+/*
 
 				echo "Downloading the artifacts from JFrog"
 
