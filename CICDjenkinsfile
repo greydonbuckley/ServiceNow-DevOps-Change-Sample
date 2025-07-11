@@ -99,9 +99,9 @@ pipeline {
 		}
 
 		stage('Sonar Scan') {
-                  tools {
-                    jdk "jdk17" // the name you have given the JDK installation in Global Tool Configuration
-                  }
+//                  tools {
+//                    jdk "jdk17" // the name you have given the JDK installation in Global Tool Configuration
+//                  }
                   steps {
 			withSonarQubeEnv(installationName: 'sonarCloud') {
 				sh 'mvn sonar:sonar \
