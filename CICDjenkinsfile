@@ -171,6 +171,12 @@ pipeline {
 			}
 		}
 
+		stage('Get Change Info') {
+			steps {
+				snDevOpsGetChangeNumber(changeDetails: """{ "pipeline_name": "${JOB_NAME}", "build_number": "${env.BUILD_NUMBER}", "stage_name": "Change"}""");
+			}
+		}
+
 		stage('Deploy') {
 			steps {
 				echo "Deploying the change..."
